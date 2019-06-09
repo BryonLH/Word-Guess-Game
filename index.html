@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="game-title">
-      Star Wars Word Guess Game
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <div id="game-alerts">
-      <p><span class="game-alert-line"></span></p>
-    </div>
+  <title>Document</title>
+</head>
 
-    <div id="game-word-display">
-      <div id="word-display">
-        <p id="word-display-letters"></p>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="game-title">
+          Star Wars Word Guess Game
+        </div>
       </div>
     </div>
 
-    <div id="game-score-display">
-      <p>Wins: <span id="win-count"></span></p>
-      <p>Losses: <span id="loss-count"></span></p>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="game-alerts">
+          <button type="new-game" id="new-game" class="btn btn-primary btn-lg btn-block" onclick="newGame()">
+            Start new Game
+          </button>
+
+          <p><span class="game-alert-line"></span></p>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="./assets/javascript/game.js"></script>
-  </body>
+    <div class="row">
+
+      <div id="game-alerts">
+        <p><span class="game-alert-line"></span></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="game-word-display">
+          <div id="word-display">
+            <p id="word-display-letters"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="guessed-letters">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="game-score-display">
+          <p>Wins: <span id="win-count"></span></p>
+          <p>Losses: <span id="loss-count"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+
 </html>
