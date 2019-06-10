@@ -9,10 +9,6 @@ function getAllIndices(arr, val) {
     return indices;
 }
 
-
-
-
-
 // var word = wordList[Math.floor(Math.random() * wordList.length)];
 // console.log(word);
 // document.getElementById("word-display-letters").innerText = word;
@@ -37,6 +33,10 @@ var anyKeyToReset = ["press any key to reset"];
 var youWin = ["you win!"];
 var youLose = ["you lose!"];
 
+for(var i = 0; i < wordList.length; i++) {
+    console.log(wordList[i]);
+}
+
 //Randomize word here
 var word = wordList[Math.floor(Math.random() * wordList.length)];
 
@@ -57,13 +57,15 @@ function newGame() {
     document.getElementById("word-display").innerHTML = word;
 }
 
-// document.onkeyup = function(event) {
-// 	var userGuess = event.key;
-
-
 function userClicksLetter() {
-    console.log(userGuesses)
-    document.getElementById("guessed-letters").innerHTML = userGuesses;
+    var x = document.getElementById("guessed-letters").value;
+    userGuesses.push(onclick);
+    document.getElementById("guessed-letters").innerHTML = x;
+
+    console.log(userGuesses);
+    console.log(x);
 }
+
+onkeyup
 
 
