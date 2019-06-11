@@ -51,6 +51,13 @@ var getRandomWord = function () {
 // console.log(wordArray)
 // var wordArray = word.split("");
 
+// function for onkeyup
+// document.onkeyup = function(event) {
+//     console.log(event.key);
+// }
+
+// enter wins++ to add to wins
+
 function newGame() {
     getRandomWord();
     console.log(word);
@@ -66,6 +73,6 @@ function userClicksLetter() {
     console.log(x);
 }
 
-onkeyup
+
 
 
