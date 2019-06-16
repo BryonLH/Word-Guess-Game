@@ -19,7 +19,7 @@ var maxGuesses = 9;
 var userGuesses = [];
 var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var underScoreArray = ["_", "_", "_", "_", "_", "_"];
-var wordList = ["jammie", "slammy"];
+var wordList = ["rampage", "unbreakable", "armageddon"];
 // var wordArray = word.split('');
 // var indicies = getAllIndices(wordArray, 'm')
 // indicies.forEach(function(i) {
@@ -32,6 +32,7 @@ var anyKeyToReset = ["press any key to reset"];
 
 var youWin = ["you win!"];
 var youLose = ["you lose!"];
+var gameOver = false;
 
 for(var i = 0; i < wordList.length; i++) {
     console.log(wordList[i]);
@@ -58,20 +59,35 @@ var getRandomWord = function () {
 
 // enter wins++ to add to wins
 
+// function for when user clicks a key
+document.onkeyup = function(event) {
+    var userGuess = event.key;
+    console.log(event.key);
+    userGuesses.splice(1, 0, event.key);
+    //  if(userGuess === )
+    document.getElementById("guessed-letters").textContent = userGuesses;
+}
+
+
 function newGame() {
+    gameOver = false;
+    console.log(gameOver);
     getRandomWord();
     console.log(word);
-    document.getElementById("word-display").innerHTML = word;
+    var wordArray = word.split("");
+    console.log(wordArray);
+    document.getElementById("word-display").innerHTML = wordArray;
 }
+console.log(userGuesses);
+// function userClicksLetter() {
+//     var x = document.getElementById("guessed-letters").value;
+//     userGuesses.push(onclick);
+//     document.getElementById("guessed-letters").innerHTML = x;
 
-function userClicksLetter() {
-    var x = document.getElementById("guessed-letters").value;
-    userGuesses.push(onclick);
-    document.getElementById("guessed-letters").innerHTML = x;
+//     console.log(userGuesses);
+//     console.log(x);
+// }
 
-    console.log(userGuesses);
-    console.log(x);
-}
 
 
 
