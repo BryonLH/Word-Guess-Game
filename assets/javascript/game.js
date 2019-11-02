@@ -3,11 +3,10 @@ var wins = 0;
 var losses = 0;
 var maxGuesses = 9;
 var userGuesses = [];
-var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var blanks = 0;
 var letterArray = [];
 var wordAfterGuess = [];
-var wordList = ["rampage", "unbreakable", "armageddon"];
+var wordList = ["rampage", "unbreakable", "armageddon", "predator", "robocop", "aliens", "ghostbusters", "gremlins", "caddyshack", "scarface", "goodfellas"];
 var word = '';
 
 
